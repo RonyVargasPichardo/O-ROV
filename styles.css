@@ -227,9 +227,6 @@
 
 
 
-
-/*MODAL SOBRE NOSOTROS*/
-
 /* Modal */
 .modal {
   display: none;
@@ -250,6 +247,7 @@
   width: 90%;
   max-width: 900px;
   display: flex;
+  flex-direction: column; /* Predeterminado para adaptarse a todas las pantallas */
   overflow: hidden;
   animation: fadeIn 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra atractiva */
@@ -257,6 +255,7 @@
 
 .modal-body {
   display: flex;
+  flex-direction: row; /* Imagen y texto lado a lado por defecto */
   width: 100%;
   height: auto;
 }
@@ -265,6 +264,7 @@
 .modal-image {
   flex: 1;
   overflow: hidden;
+  width: 100%;
 }
 
 .modal-image img {
@@ -336,6 +336,58 @@
     transform: translateY(0);
   }
 }
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .modal-content {
+    flex-direction: column; /* Cambiar a diseño vertical */
+    max-height: 90%; /* Ajustar altura para caber en pantallas pequeñas */
+  }
+
+  .modal-body {
+    flex-direction: column; /* Imagen arriba, texto abajo */
+  }
+
+  .modal-image {
+    height: auto; /* Ajustar la altura automáticamente */
+    margin-bottom: 15px; /* Separar la imagen del texto */
+  }
+
+  .modal-image img {
+    height: auto; /* Ajustar tamaño según el ancho */
+    max-height: 200px; /* Limitar altura de la imagen */
+    object-fit: cover; /* Ajustar imagen */
+  }
+
+  .modal-text {
+    flex: unset;
+    padding: 15px; /* Reducir padding */
+    max-height: calc(100vh - 250px); /* Altura máxima relativa al viewport menos el espacio de la imagen */
+    overflow-y: auto; /* Habilitar scroll para contenido largo */
+  }
+
+  .modal-text h2 {
+    font-size: 1.5rem; /* Ajustar tamaño de fuente */
+  }
+
+  .modal-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .modal-text p, 
+  .modal-text ul li {
+    font-size: 0.9rem; /* Texto más pequeño en móviles */
+    line-height: 1.4;
+  }
+
+  .close-btn {
+    top: 10px;
+    right: 15px; /* Ajustar posición del botón */
+    font-size: 20px; /* Reducir tamaño del botón */
+  }
+}
+
+
 
 
 
