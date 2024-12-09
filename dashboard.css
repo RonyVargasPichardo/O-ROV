@@ -1,0 +1,200 @@
+/* Estilos Generales del Dashboard */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+/* Header del Dashboard */
+.header {
+    display: flex;
+    justify-content: space-around; /* Espacio entre el logo y la navegación */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 15px 30px;
+    background-color: var(--blanco);
+    border-bottom: 2px solid var(--verde-claro);
+  }
+  
+  .header .logo {
+    display: flex;
+    align-items: center; /* Centra verticalmente el logo */
+  }
+  
+  .header .logo img {
+    height: 50px;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre los elementos */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar ul li {
+    font-size: 1rem;
+    color: var(--verde-oscuro);
+  }
+  
+  .navbar ul li span {
+    font-weight: bold;
+  }
+  
+  .navbar ul li button {
+    padding: 10px 15px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .navbar ul li button:hover {
+    background-color: #93A267;
+    color: white;
+  }
+  
+  
+  /* Contenedor Principal */
+  #dashboard {
+    padding: 20px;
+  }
+  
+  #dashboard h2 {
+    font-size: 2rem;
+    color: #485935;
+    margin-bottom: 20px;
+  }
+  
+  /* Botones */
+  .btn-primary {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    color: #485935;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: #93A267;
+    color: white;
+  }
+  
+  /* Conectar Dispositivo */
+  #conectar-dispositivo {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #conectar-dispositivo h3 {
+    font-size: 1.5rem;
+    color: #485935;
+    margin-bottom: 15px;
+  }
+  
+  #conectar-dispositivo p {
+    font-size: 1rem;
+    color: #485935;
+  }
+  
+  /* Datos Recolectados */
+  #datos-recolectados {
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  #datos-recolectados h3 {
+    font-size: 1.5rem;
+    color: #485935;
+    margin-bottom: 15px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul li {
+    font-size: 1.2rem;
+    color: #485935;
+    margin-bottom: 10px;
+  }
+  
+
+
+
+  /* Media Queries */
+
+/* Pantallas pequeñas (teléfonos: hasta 768px) */
+@media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 10px 15px;
+    }
+  
+    .logo img {
+      height: 40px;
+    }
+  
+    .navbar ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    #conectar-dispositivo, #datos-recolectados {
+      max-width: 90%;
+    }
+  
+    ul li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Pantallas extra pequeñas (teléfonos: hasta 480px) */
+  @media (max-width: 480px) {
+    .header {
+      padding: 5px 10px;
+    }
+  
+    .logo img {
+      height: 30px;
+    }
+  
+    .navbar ul li button {
+      font-size: 0.8rem;
+      padding: 8px 12px;
+    }
+  
+    #conectar-dispositivo, #datos-recolectados {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    ul li {
+      font-size: 0.9rem;
+    }
+  }
+  

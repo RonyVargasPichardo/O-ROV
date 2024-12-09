@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="./img/logo o-rov.png" alt="Logo O-ROV">
+    </div>
+    <nav class="navbar">
+      <ul id="user-nav">
+        <!-- Aquí se llenará dinámicamente con el nombre del usuario y el botón de cerrar sesión -->
+      </ul>
+    </nav>
+  </header>
+
+  <div id="dashboard">
+    <div id="conectar-dispositivo">
+      <h3>Conectar Dispositivo</h3>
+      <p>Presiona el botón para iniciar la conexión con el dispositivo.</p>
+      <button id="buscar-dispositivos" class="btn-primary">Conectar</button>
+    </div>
+
+    <p id="estado-conexion">Estado de conexión: Desconectado</p>
+    <div id="datos-recolectados" style="margin-top: 20px; display: none;">
+      <h3>Datos en Tiempo Real</h3>
+      <ul>
+        <li><strong>Humedad del Suelo:</strong> <span id="humedad">Cargando...</span></li>
+        <li><strong>Temperatura:</strong> <span id="temperatura">Cargando...</span></li>
+        <li><strong>pH del Suelo:</strong> <span id="ph">Cargando...</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>
