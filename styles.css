@@ -96,6 +96,17 @@
   color: var(--verde-oscuro);
 }
 
+.contact-item a {
+  text-decoration: none;
+  color: var(--verde-oscuro); 
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+  color: var(--verde-medio); 
+}
+
+
 
 /* Hero */
 .hero {
