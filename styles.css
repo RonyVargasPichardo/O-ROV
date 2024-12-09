@@ -656,3 +656,13 @@ button:hover {
     margin-right: 15px;
   }
 }
+
+.footer a {
+  text-decoration: none; 
+  color: var(--verde-oscuro);
+}
+
+.footer a:hover {
+  color: var(--amarillo); 
+  text-decoration: underline; /
+}
