@@ -659,7 +659,7 @@ button:hover {
 
 .footer a {
   text-decoration: none; 
-  color: var(--verde-oscuro);
+  color:  var(--blanco);
 }
 
 .footer a:hover {
